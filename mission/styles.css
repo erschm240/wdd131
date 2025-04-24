@@ -1,25 +1,22 @@
 .content {
-    border: 1px solid gray;
-    margin: 40px;
-    padding: 60px 80px;
-    max-width: 700px;
+    border: 1px solid #a3a3a3;
+    margin: 40px auto;
+    padding: 60px 100px;
+    max-width: 600px;
     line-height: 1.5em;
     font-size: 20px;
-}
-
-.content * {
-    max-width: 600px;
 }
 
 .title {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin: auto 50px;
 }
 
 span {
     font-style: normal;
-    font-weight: 540;
+    font-weight: 549;
 }
 
 h1 {
@@ -35,15 +32,22 @@ h2 {
 hr {
     display: flex;
     margin: 0 auto;
+    max-width: 500px;
+    color: #c9c9c9;
 }
 
 main {
     margin: 50px 0px;
     font-size: 17px;
+    margin: auto 50px;
 }
 
 li {
     margin-bottom: 20px;
+}
+
+footer {
+    margin: auto 50px;
 }
 
 img {
