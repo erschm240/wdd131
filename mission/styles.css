@@ -1,3 +1,4 @@
+/* General and border style */
 .content {
     border: 1px solid #a3a3a3;
     margin: 40px auto;
@@ -7,6 +8,7 @@
     font-size: 20px;
 }
 
+/* Header style */
 .title {
     text-align: center;
     text-transform: uppercase;
@@ -36,6 +38,7 @@ hr {
     color: #c9c9c9;
 }
 
+/* Main content style */
 main {
     font-size: 17px;
     margin: auto 50px;
@@ -45,6 +48,7 @@ li {
     margin-bottom: 20px;
 }
 
+/* Footer Style */
 footer {
     margin: auto 50px;
     margin-top: 50px;
