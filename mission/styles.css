@@ -18,6 +18,24 @@
     color: #A0D4ED;
 }
 
+.dark select {
+    background-color: #333;
+    color: white;
+    box-shadow: 1px 1px 4px black;
+}
+
+/* Theme selector style */
+select {
+    width: 100px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #a3a3a3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    outline: none;
+}
+
 /* Header style */
 .title {
     text-align: center;
