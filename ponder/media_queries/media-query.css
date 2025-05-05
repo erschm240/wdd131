@@ -5,7 +5,7 @@ body {
 }
 
 header, main, footer {
-    max-width: 640px;
+    /* max-width: 640px; */
     margin: 1rem auto;
     border: 1px solid #bbb;
     padding: 20px;
@@ -40,8 +40,8 @@ section {
     }
 }
 
-/* @media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
     main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-} */
+}
