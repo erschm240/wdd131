@@ -10,6 +10,7 @@ header, main, footer {
     border: 1px solid #bbb;
     padding: 20px;
     background-color: #88d3f4;
+    display: none;
 }
 
 main {
@@ -37,6 +38,9 @@ section {
 @media screen and (min-width: 700px) {
     main {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    header {
+        display: block;
     }
 }
 
