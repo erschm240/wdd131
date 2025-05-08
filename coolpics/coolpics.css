@@ -113,9 +113,9 @@ footer p {
         margin: auto 70px;
     }
 
-    /* h2 {
-        font-size: 0.5em;
-    } */
+    h2 {
+        font-size: 0.6em;
+    }
     
     section {
         grid-template-columns: 1fr 1fr 1fr;
