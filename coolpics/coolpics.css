@@ -102,15 +102,20 @@ footer p {
     }
 
     nav {
-        display: inline;
-        margin: 0 auto;
+        display: flex;
+        margin: 20px auto;
+        max-width: fit-content;
     }
 
     a, a:link, a:visited {
         display: inline;
         font-size: 0.3em;
-        margin: auto 50px;
+        margin: auto 70px;
     }
+
+    /* h2 {
+        font-size: 0.5em;
+    } */
     
     section {
         grid-template-columns: 1fr 1fr 1fr;
@@ -118,5 +123,6 @@ footer p {
 
     footer {
         font-size: 1.3em;
+        padding: 5px;
     }
 }
