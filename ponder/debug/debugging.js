@@ -10,7 +10,9 @@ area = radius * radius * PI;
 console.log(area)
 
 function circleArea(radius) {
-    const area = radius * PI
+    area = radius * radius * PI
+    return area
 }
+
 area = circleArea(3);
 console.log(area)
