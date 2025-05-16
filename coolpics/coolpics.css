@@ -51,6 +51,10 @@ a, a:link, a:visited {
     display: block;
 }
 
+.hide {
+    display: none;
+}
+
 figure {
     margin: 0 auto;
 }
@@ -73,13 +77,13 @@ footer p {
     h1 {
         font-size: 1.3em;
     }
-    
-    button {
-    margin-bottom: 20px;
+
+    nav.hide {
+    display: none;
     }
 
     nav {
-        display: none;
+        display: block;
     }
 
     section {

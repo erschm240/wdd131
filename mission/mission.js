@@ -12,7 +12,8 @@ function changeTheme() {
         // change logo to new logo
         document.body.classList = "dark";
         logo.src = "byui-logo_white.png";
-    } else {
+    } 
+    else {
         // remove dark class
         // change logo to original logo
         document.body.classList = "";
