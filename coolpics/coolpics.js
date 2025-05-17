@@ -1,9 +1,10 @@
 const btn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
-const gallery = document.querySelector(".gallery")
-const img = document.querySelector("img")
-const modal = document.querySelector("dialog")
-const closeBtn = document.querySelector(".close-viewer")
+const gallery = document.querySelector(".gallery");
+const img = document.querySelector("img");
+const modal = document.querySelector("dialog");
+const modalBtn = document.querySelector(".close-viewer");
+
 
 function toggleMenu() {
     menu.classList.toggle("hide");
@@ -31,19 +32,26 @@ function galleryClicked(clickEvent) {
 }
 
 function showModal(img) {
-    const modal = document.createElement('dialog');
+    let modal = document.createElement('dialog');
     modal.innerHTML = `<img src="${img}"><button class="close-viewer">X</button>`;
     document.body.appendChild(modal);
+    let modalBtn = modal.querySelector(".close-viewer");
     modal.showModal();
+    const closeModal = modalBtn.addEventListener("click", closeBtn);
 }
 
 const clickEvent = gallery.addEventListener("click", galleryClicked);
+
+
 
 function closeBtn(clickEvent) {
     if (clickEvent.target.classList.contains("close-viewer")) {
         modal.close();
     }
+    console.log(".closeviewer");
 }
+
+// const closeModal = modalBtn.addEventListener("click", closeBtn);
 
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
@@ -51,4 +59,4 @@ modal.addEventListener('click', (event) => {
 }
 });
 
-const closeModal = closeBtn.addEventListener("click");
+// console.log(document.querySelector(".close-viewer"));

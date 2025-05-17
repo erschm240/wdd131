@@ -60,15 +60,10 @@ figure {
 }
 
 dialog {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     margin: 0 auto;
-    /* position: fixed; */
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: block;
 }
 
@@ -80,8 +75,8 @@ dialog img {
 
 .close-viewer {
     position: absolute;
-    top: 20vh;
     max-height: 100%;
+    font-size: 0.7em;
 }
 
 .gallery img {
@@ -148,6 +143,10 @@ footer p {
     
     section {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .close-viewer {
+        display: inline;
     }
 
     footer {
