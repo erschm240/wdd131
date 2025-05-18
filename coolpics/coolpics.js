@@ -9,8 +9,8 @@ const modalBtn = document.querySelector(".close-viewer");
 function toggleMenu() {
     menu.classList.toggle("hide");
 }
-
 btn.addEventListener("click", toggleMenu);
+
 
 function handleResize() {
     if (window.innerWidth > 1000) {
@@ -20,9 +20,9 @@ function handleResize() {
         menu.classList.add("hide");
     }
 }
-
 handleResize();
 window.addEventListener("resize", handleResize);
+
 
 function galleryClicked(clickEvent) {
     clickEvent.target.closest("img");
@@ -30,6 +30,8 @@ function galleryClicked(clickEvent) {
     const changeImg = srcValue.split("-")[0] + "-full.jpeg";
     showModal(changeImg);
 }
+const clickEvent = gallery.addEventListener("click", galleryClicked);
+
 
 function showModal(img) {
     let modal = document.createElement('dialog');
@@ -37,26 +39,17 @@ function showModal(img) {
     document.body.appendChild(modal);
     let modalBtn = modal.querySelector(".close-viewer");
     modal.showModal();
-    const closeModal = modalBtn.addEventListener("click", closeBtn);
-}
-
-const clickEvent = gallery.addEventListener("click", galleryClicked);
-
-
-
-function closeBtn(clickEvent) {
-    if (clickEvent.target.classList.contains("close-viewer")) {
-        modal.close();
+    function closeBtn(closeBtn) {
+        if (closeBtn.target.classList.contains("close-viewer")) {
+            modal.close();
+            modal.remove();
+        }
     }
-    console.log(".closeviewer");
+    const closeModal = modalBtn.addEventListener("click", closeBtn);
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.close();
+            modal.remove();
+        }
+    });
 }
-
-// const closeModal = modalBtn.addEventListener("click", closeBtn);
-
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-    modal.close();
-}
-});
-
-// console.log(document.querySelector(".close-viewer"));
