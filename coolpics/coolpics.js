@@ -27,6 +27,7 @@ window.addEventListener("resize", handleResize);
 function galleryClicked(clickEvent) {
     clickEvent.target.closest("img");
     const srcValue = img.src;
+    const altValue = img.alt;
     const changeImg = srcValue.split("-")[0] + "-full.jpeg";
     showModal(changeImg);
 }
