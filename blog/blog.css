@@ -17,7 +17,7 @@
 #site-heading {
     font-family: var(--secondary-font);
     color: var(--text-dark);
-    margin: 50px;
+    margin: 40px;
     text-align: center;
 }
 
@@ -42,11 +42,13 @@ nav a {
 #main-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 50px;
+    margin: 50px 10px;
 }
 
 .article {
-    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .article-heading {
@@ -56,4 +58,38 @@ nav a {
 
 .article-date, p {
     font-family: var(--primary-font);
+}
+
+.article-left {
+    border-right: 2px solid var(--secondary-color);
+    text-align: right;
+    padding: 20px;
+}
+
+.article-right {
+    max-width: 500px;
+}
+
+#read-more {
+    background-color: #ffffff;
+    border: none;
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+.article-heading, .book-cover, .article-right p {
+    margin: 20px;
+}
+
+.article-date, .article-left p {
+    font-weight: normal;
+}
+.book-cover {
+    display: block;
+    margin: 0 auto;
+}
+
+#filter {
+    border: 2px solid var(--secondary-color);
+    padding: 20px;
 }
