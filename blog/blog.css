@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
-
+/* saved colors and fonts in variables */
 :root {
     --primary-color: #45469b;
     --secondary-color:  #EFC69B;
@@ -10,10 +10,12 @@
     --secondary-font: "Domine", Georgia, serif;
 }
 
+/* reset margin on all elements */
 * {
     margin: 0 auto;
 }
 
+/* h1 style */
 #site-heading {
     font-family: var(--secondary-font);
     color: var(--text-dark);
@@ -21,6 +23,7 @@
     text-align: center;
 }
 
+/* navbar style */
 nav a {
     font-family: var(--primary-font);
     color: var(--primary-color);
@@ -39,13 +42,15 @@ nav a {
     padding-right: 50px;
 }
 
+/* main grid style */
 #main-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
     margin: 50px 10px;
     row-gap: 40px;
 }
 
+/* filter box style */
 #filter {
     border: 2px solid var(--secondary-color);
     padding: 20px;
@@ -53,28 +58,16 @@ nav a {
     grid-row: 1 / 10;
 }
 
-.article-heading {
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
+/* article container style */
+.article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 50px 10px;
+    row-gap: 40px;
+    grid-row: 1 / 2;
 }
 
-.article-date, p {
-    font-family: var(--primary-font);
-}
-
-.article-heading, .book-cover, .article-right p {
-    margin: 20px;
-}
-
-.article-heading {
-    margin-top: 0;
-}
-
-.article-date, .article-left p {
-    font-weight: normal;
-    margin: 10px;
-}
-
+/* left article styling */
 .article-left {
     border-right: 2px solid var(--secondary-color);
     text-align: right;
@@ -83,8 +76,28 @@ nav a {
     grid-column: 1 / 2;
 }
 
+.article-date, .article-left p {
+    font-weight: normal;
+    margin: 10px;
+}
+
+.article-date, p {
+    font-family: var(--primary-font);
+}
+
+/* right article styling */
 .article-right {
     grid-column: 2 / 3;
+}
+
+.article-heading, .book-cover, .article-right p {
+    margin: 20px;
+}
+
+.article-heading {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
 #read-more {
