@@ -46,8 +46,9 @@ nav a {
 #main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 50px 10px;
-    row-gap: 40px;
+    margin: 0px 10px;
+    row-gap: 60px;
+    grid-auto-rows: auto;
 }
 
 /* filter box style */
@@ -55,7 +56,7 @@ nav a {
     border: 2px solid var(--secondary-color);
     padding: 20px;
     grid-column: 3 / 4;
-    grid-row: 1 / 10;
+    grid-row: 2 / 5;
 }
 
 /* article container style */
@@ -63,8 +64,6 @@ nav a {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 50px 10px;
-    row-gap: 40px;
-    grid-row: 1 / 2;
 }
 
 /* left article styling */
@@ -72,13 +71,17 @@ nav a {
     border-right: 2px solid var(--secondary-color);
     text-align: right;
     width: 200px;
-    padding: 20px;
+    padding-right: 20px;
     grid-column: 1 / 2;
 }
 
 .article-date, .article-left p {
     font-weight: normal;
     margin: 10px;
+}
+
+.article-date {
+    margin-top: 0;
 }
 
 .article-date, p {
@@ -88,6 +91,7 @@ nav a {
 /* right article styling */
 .article-right {
     grid-column: 2 / 3;
+    min-width: 100%;
 }
 
 .article-heading, .book-cover, .article-right p {
