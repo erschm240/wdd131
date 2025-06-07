@@ -14,11 +14,13 @@ function togglePaymentDetails() {
     
     if (value == 'creditCard') {
         creditCard.classList.remove = "hide";
-
+        creditCard.required = false;
     }
 
     if (value == 'paypal') {
         creditCard.classList.remove = "hide";
-
+        paypal.required = false;
     }
 }
+
+selectPayment.addEventListener("change", togglePaymentDetails)
