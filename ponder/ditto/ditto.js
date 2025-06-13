@@ -28,5 +28,5 @@ dittoImg.src = ditto.sprite;
 
 dittoImg.addEventListener('click', function(){
     dittoImg.src = ditto.transform();
-    dittoImg.classList = 'shiny'
-})
+    dittoImg.classList = 'shiny';
+});
