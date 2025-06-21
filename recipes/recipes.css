@@ -1,3 +1,4 @@
+/* Global style */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
     :root {
     --primary-color: #1B98E0;
@@ -8,12 +9,119 @@
     --secondary-font: "Amatic SC";
 }
 
+* {
+    margin: 0;
+}
+
 img {
 	max-width: 100%;
 }
 
+.hidden {
+    display: none;
+}
 
+/* Header style */
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+    margin: 50px;
+}
+
+#logo {
+    width: 80px;
+}
+
+header h1 {
+    font-family: var(--secondary-font);
+    font-size: 3em;
+    margin-bottom: -15px;
+    flex: 0 1 5em;
+}
+
+/* Search bar style */
+#search-bar {
+    display: flex;
+    margin: 20px;
+}
+
+#search-input {
+    width: 100%;
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-right: 2px solid black;
+    border-radius: 5px 0 0 5px;
+}
+
+#search-btn {
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+}
+
+#search-btn img {
+    padding: 1px;
+}
+
+/* Hr line break style */
+hr {
+    margin: 20px 0;
+}
+
+/* Recipe container style */
+.recipe {
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.recipe-tags {
+    /* tag container */
+    display: flex;
+    margin-left: -5px;
+}
+
+.recipe-tag {
+    /* individual tags */
+    border: 1px solid black;
+    margin: 5px 5px;
+    padding: 5px 10px;
+    font-family: var(--primary-font);
+}
+
+.recipe-name {
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+
+.icon-star,
+.icon-star-empty {
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.icon-star-empty {
+    font-size: 1.5em;
+}
+
+/* Footer style */
+footer {
+    justify-items: center;
+}
+
+footer img {
+    width: 40px;
+}
 
 .attribution {
-    font-size: 0.6em;
+    font-size: 0.8em;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    text-decoration: none;
 }

@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/recipe-book.png" alt="Recipe book site logo">
+        <img id="logo" src="images/recipe-book.png" alt="Recipe book site logo">
         <h1>RecipeBook</h1>
     </header>
     <main>
         <form action="/search" method="get" id="search-bar">
-            <input type="search" placeholder="Find a Recipe">
-            <button type="submit"><img src="images/search.svg" alt="Search button"></button>
+            <input id="search-input" type="search" placeholder="Find a Recipe">
+            <button id="search-btn" type="submit"><img src="images/search.svg" alt="Search button"></button>
         </form>
+        <hr>
         <section class="recipe">
             <img src="images/chicken-curry.webp" alt="Chicken curry with white rice">
-            <div class="tags">
+            <div class="recipe-tags">
                 <div class="recipe-tag">chicken</div>
                 <div class="recipe-tag">entree</div>
                 <div class="recipe-tag">Indian</div>
