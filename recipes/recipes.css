@@ -115,6 +115,11 @@ footer {
     justify-items: center;
 }
 
+footer a {
+    width: auto;
+    height: auto;
+}
+
 footer img {
     width: 40px;
 }
@@ -122,6 +127,5 @@ footer img {
 .attribution {
     font-size: 0.8em;
     font-family: var(--primary-font);
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--text-dark);
 }
