@@ -25,6 +25,7 @@ img {
 header {
     display: flex;
     align-items: flex-end;
+    justify-self: center;
     justify-content: center;
     justify-items: center;
     margin: 50px;
@@ -72,6 +73,8 @@ hr {
 
 /* Recipe container style */
 .recipe {
+    display: flex;
+    flex-direction: column;
     justify-self: center;
     border: 1px solid black;
     border-radius: 5px;
@@ -112,12 +115,10 @@ hr {
 
 /* Footer style */
 footer {
-    justify-items: center;
-}
-
-footer a {
-    width: auto;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 20px;
 }
 
 footer img {
@@ -128,4 +129,44 @@ footer img {
     font-size: 0.8em;
     font-family: var(--primary-font);
     color: var(--text-dark);
+}
+
+/* For 600px screens */
+@media screen and (min-width: 600px) {
+    .hidden {
+        display: flex;
+    }
+
+    hr {
+        margin: 20px;
+    }
+    
+    .recipe {
+        display: flex;
+        flex-direction: row;
+        margin: 50px;
+    }
+
+    .recipe img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .details {
+        margin: 20px;
+        margin-top: -5px;
+    }
+
+    .recipe-tags {
+        flex-wrap: wrap;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
 }
