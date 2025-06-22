@@ -139,10 +139,16 @@ footer {
     gap: 10px;
 }
 
-footer img {
+.social a {
+    padding: 1px;
+}
+
+.social img {
     width: 40px;
     justify-self: center;
 }
+
+
 
 .attribution {
     font-size: 0.8em;
