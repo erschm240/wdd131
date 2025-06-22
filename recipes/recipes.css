@@ -140,7 +140,7 @@ footer {
 }
 
 .social a {
-    padding: 1px;
+    padding: 5px;
 }
 
 .social img {
@@ -148,13 +148,12 @@ footer {
     justify-self: center;
 }
 
-
-
 .attribution {
     font-size: 0.8em;
     font-family: var(--primary-font);
     color: var(--text-dark);
     text-align: center;
+    padding: 5px;
 }
 
 /* For 600px screens */
