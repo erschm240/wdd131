@@ -1,12 +1,12 @@
 /* Global style */
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
     :root {
     --primary-color: #1B98E0;
     --secondary-color: #59c3c3;
     --text-dark: #333;
     --text-light: #ebebeb;
     --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: "Amatic SC";
+    --secondary-font: "Patrick Hand";
 }
 
 * {
@@ -32,12 +32,12 @@ header {
 }
 
 #logo {
-    width: 80px;
+    width: 110px;
 }
 
 header h1 {
     font-family: var(--secondary-font);
-    font-size: 3em;
+    font-size: 4.5em;
     margin-bottom: -15px;
     flex: 0 1 5em;
 }
@@ -46,6 +46,8 @@ header h1 {
 #search-bar {
     display: flex;
     margin: 20px;
+    width: 90%;
+    justify-self: center;
 }
 
 #search-input {
@@ -80,6 +82,7 @@ hr {
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
+    width: 85%;
 }
 
 .recipe-tags {
@@ -98,9 +101,17 @@ hr {
 
 .recipe-name {
     font-family: var(--secondary-font);
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--primary-color);
     margin-top: 20px;
+}
+
+.recipe p {
+    font-family: var(--primary-font);
+}
+
+.rating {
+    margin-bottom: 20px;
 }
 
 .icon-star,
@@ -119,16 +130,25 @@ footer {
     flex-direction: column;
     justify-self: center;
     padding: 20px;
+    width: 95%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 footer img {
     width: 40px;
+    justify-self: center;
 }
 
 .attribution {
     font-size: 0.8em;
     font-family: var(--primary-font);
     color: var(--text-dark);
+    text-align: center;
 }
 
 /* For 600px screens */
@@ -168,5 +188,11 @@ footer img {
 }
 
 @media screen and (min-width: 960px) {
-    
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
 }
