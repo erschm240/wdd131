@@ -114,6 +114,8 @@ console.log(filteredList);
 
 let hikeQuery = 'easy';
 
+// hikeQuery = document.querySelector('#search');
+
 let filteredHikes = hikes.filter(function(hike){
     return(
         hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
