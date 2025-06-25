@@ -112,29 +112,59 @@ console.log(filteredList);
 
 // Like homework
 
-let hikeQuery = 'easy';
+function search() {
 
-// hikeQuery = document.querySelector('#search');
+    let hikeQuery = 'easy';
 
-let filteredHikes = hikes.filter(function(hike){
-    return(
-        hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
-        hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
-        hike.tags.find((tag) => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
-    )
-});
+    // hikeQuery = document.querySelector('#search');
 
-function compareHikes(a,b) {
-    if (a.name < b.name) {
-        return -1;
-    } else if (a.name > b.name) {
-        return 1;
+    let filteredHikes = hikes.filter(function(hike){
+        return(
+            hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+            hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+            hike.tags.find((tag) => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
+        )
+    });
+
+    function compareHikes(a,b) {
+        if (a.name < b.name) {
+            return -1;
+        } else if (a.name > b.name) {
+            return 1;
+        }
+        // a must be equal to b
+        return 0;
     }
-    // a must be equal to b
-    return 0;
+
+    let sortedHikes = filteredHikes.sort(compareHikes);
+
+    console.log(filteredHikes);
 }
 
-let sortedHikes = filteredHikes.sort(compareHikes);
+let randomNum = Math.floor(Math.random() * hikes.length);
+console.log(randomNum);
 
-console.log(filteredHikes);
+function tagTemplate(tags) {
+    return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
+}
 
+function hikesTemplate(hike) {
+    return  `<div class="hike-card">
+        <div class="hike-content">
+            <h2>${hike.name}</h2>
+            <divclass="hike-tags">
+                ${tagTemplate(hike.tags)}
+            </div>
+            <p>${hike.description}</p>
+        </div>
+    </div>`
+}
+
+
+function renderHike(hike) {
+    let hikeContainer = document.querySelector("#hike-container");
+    let html = hikesTemplate(hike);
+    hikeContainer.innerHTML += html;
+}
+
+renderHike(hikes[randomNum]);
