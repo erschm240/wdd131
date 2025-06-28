@@ -160,7 +160,6 @@ function hikesTemplate(hike) {
     </div>`
 }
 
-
 function renderHike(hike) {
     let hikeContainer = document.querySelector("#hike-container");
     let html = hikesTemplate(hike);

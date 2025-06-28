@@ -165,7 +165,7 @@ const recipes = [
 			'Can add condiments if desired: fried potatoes, raisins, toasted coconut, chutney, diced peppers, almonds, cashews.'
 		],
 		recipeYield: '5 servings',
-		rating: 4
+		rating: 5
 	},
 	{
 		author: 'Shane Thompson',
@@ -279,3 +279,63 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+let randomNum = Math.floor(Math.random() * recipes.length);
+
+function tagTemplate(tags) {
+	return tags.map((tag)=> `<div class="recipe-tag">${tag}</div>`).join(" ")
+}
+
+function ratingTemplate(rating) {
+    let html = `<span
+		class="rating"
+		role="img"
+		aria-label="Rating: ${rating} out of 5"
+	>`
+
+    for (let i = 1; i <= 5; i++) {
+		if (i <= rating) {
+        html += `<span aria-hidden="true" class="icon-star">⭐</span>`
+	}
+	else {
+        html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`
+	}
+}
+
+    html += `</span>`
+
+    return html
+
+}
+
+function recipeTemplate(recipe) {
+	return `<img src="${recipe.image}" alt="Image of the recipe food">
+            <div class="details">
+                <div class="recipe-tags">
+                    ${tagTemplate(recipe.tags)}
+                </div>
+                <h2 class="recipe-name">${recipe.name}</h2>
+                <div class="rating">
+					${ratingTemplate(recipe.rating)}
+				</div>
+                <p class="recipe-description hidden">${recipe.description}</p>
+            </div>`
+}
+
+
+let searchBar = document.querySelector("#search-input")
+let query = searchBar.value;
+console.log(query)
+
+
+function filterRecipes(query) {
+
+}
+
+function renderRecipe(recipe) {
+	let recipeContainer = document.querySelector(".recipe");
+	let html = recipeTemplate(recipe);
+	recipeContainer.innerHTML += html;
+}
+
+renderRecipe(recipes[randomNum]);
