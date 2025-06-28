@@ -322,15 +322,36 @@ function recipeTemplate(recipe) {
             </div>`
 }
 
+function searchRecipes(query) {
+	let filteredRecipes = recipes.filter(function(recipe){
+		return(
+			recipe.name.toLowerCase().includes(query.toLowerCase()) ||
+			recipe.description.toLowerCase().includes(query.toLowerCase()) ||
+			recipe.tags.find((tag) => tag.toLowerCase().includes(query.toLowerCase()))
+		)
+	})
 
-let searchBar = document.querySelector("#search-input")
-let query = searchBar.value;
-console.log(query)
+	function compareRecipes(a,b) {
+        if (a.name < b.name) {
+            return -1;
+        } else if (a.name > b.name) {
+            return 1;
+        }
+        // a must be equal to b
+        return 0;
+    }
 
-
-function filterRecipes(query) {
-
+	let sortedRecipes = filteredRecipes.sort(compareRecipes);
+	return sortedRecipes
 }
+
+let searchBtn = document.querySelector("#search-btn");
+searchBtn.addEventListener("click", function(e) {
+	e.preventDefault();
+	let searchBar = document.querySelector("#search-input")
+	let query = searchBar.value;
+	searchRecipes(query);
+});
 
 function renderRecipe(recipe) {
 	let recipeContainer = document.querySelector(".recipe");

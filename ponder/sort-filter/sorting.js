@@ -138,7 +138,7 @@ function search() {
 
     let sortedHikes = filteredHikes.sort(compareHikes);
 
-    console.log(filteredHikes);
+    console.log(sortedHikes);
 }
 
 let randomNum = Math.floor(Math.random() * hikes.length);
