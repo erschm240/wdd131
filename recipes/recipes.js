@@ -296,8 +296,7 @@ function ratingTemplate(rating) {
     for (let i = 1; i <= 5; i++) {
 		if (i <= rating) {
         html += `<span aria-hidden="true" class="icon-star">⭐</span>`
-	}
-	else {
+	} else {
         html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`
 	}
 }
@@ -350,7 +349,19 @@ searchBtn.addEventListener("click", function(e) {
 	e.preventDefault();
 	let searchBar = document.querySelector("#search-input")
 	let query = searchBar.value;
-	searchRecipes(query);
+	let recipes = searchRecipes(query);
+	let recipeContainer = document.querySelector(".recipe");
+	recipeContainer.innerHTML = "";
+	recipes.forEach(recipe => {
+		renderRecipe(recipe);
+		recipeContainer.innerHTML += `<br/><hr/>`;
+		// let mainContainer = document.querySelector("main");
+		// let newRecipeContainer = document.createElement("section");
+		// newRecipeContainer.classList.add("recipe");
+		// mainContainer.appendChild(newRecipeContainer);
+		// newRecipeContainer.appendChild(renderRecipe(recipe));
+		// mainContainer.appendChild(renderRecipe(recipe));
+	});
 });
 
 function renderRecipe(recipe) {
@@ -358,5 +369,15 @@ function renderRecipe(recipe) {
 	let html = recipeTemplate(recipe);
 	recipeContainer.innerHTML += html;
 }
+
+// function renderSearch(recipe) {
+// 	let recipeContainer = document.querySelector(".recipe");
+// 	recipeContainer.innerHTML = "";
+// 	let mainContainer = document.querySelector("main");
+// 	let newRecipeContainer = document.createElement("section");
+// 	newRecipeContainer.classList.add("recipe");
+// 	mainContainer.appendChild(newRecipeContainer);
+// 	newRecipeContainer.appendChild(renderRecipe(recipe));
+// }
 
 renderRecipe(recipes[randomNum]);
