@@ -193,11 +193,18 @@ footer {
 }
 
 @media screen and (min-width: 960px) {
+    main {
+        max-width: 1000px;
+        justify-self: center;
+    }
+
     footer {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
+        max-width: 1000px;
+        justify-self: center;
     }
 }
