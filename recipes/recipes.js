@@ -308,17 +308,19 @@ function ratingTemplate(rating) {
 }
 
 function recipeTemplate(recipe) {
-	return `<img src="${recipe.image}" alt="Image of the recipe food">
-            <div class="details">
-                <div class="recipe-tags">
-                    ${tagTemplate(recipe.tags)}
-                </div>
-                <h2 class="recipe-name">${recipe.name}</h2>
-                <div class="rating">
-					${ratingTemplate(recipe.rating)}
-				</div>
-                <p class="recipe-description hidden">${recipe.description}</p>
-            </div>`
+	return `<section class="recipe">
+				<img src="${recipe.image}" alt="Image of the recipe food">
+						<div class="details">
+							<div class="recipe-tags">
+								${tagTemplate(recipe.tags)}
+							</div>
+							<h2 class="recipe-name">${recipe.name}</h2>
+							<div class="rating">
+								${ratingTemplate(recipe.rating)}
+							</div>
+							<p class="recipe-description hidden">${recipe.description}</p>
+						</div>
+			</section>`
 }
 
 function searchRecipes(query) {
@@ -350,22 +352,18 @@ searchBtn.addEventListener("click", function(e) {
 	let searchBar = document.querySelector("#search-input")
 	let query = searchBar.value;
 	let recipes = searchRecipes(query);
-	let recipeContainer = document.querySelector(".recipe");
-	recipeContainer.innerHTML = "";
+	let manyRecipeContainer = document.querySelector(".many-recipes");
+	manyRecipeContainer.innerHTML = "";
+
 	recipes.forEach(recipe => {
-		renderRecipe(recipe);
-		recipeContainer.innerHTML += `<br/><hr/>`;
-		// let mainContainer = document.querySelector("main");
-		// let newRecipeContainer = document.createElement("section");
-		// newRecipeContainer.classList.add("recipe");
-		// mainContainer.appendChild(newRecipeContainer);
-		// newRecipeContainer.appendChild(renderRecipe(recipe));
-		// mainContainer.appendChild(renderRecipe(recipe));
+		let newRecipeContainer = document.createElement("section");
+		newRecipeContainer.classList.add("recipe");
+		newRecipeContainer.appendChild(renderRecipe(recipe));
 	});
 });
 
 function renderRecipe(recipe) {
-	let recipeContainer = document.querySelector(".recipe");
+	let recipeContainer = document.querySelector(".many-recipes");
 	let html = recipeTemplate(recipe);
 	recipeContainer.innerHTML += html;
 }
