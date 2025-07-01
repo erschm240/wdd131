@@ -356,9 +356,7 @@ searchBtn.addEventListener("click", function(e) {
 	manyRecipeContainer.innerHTML = "";
 
 	recipes.forEach(recipe => {
-		let newRecipeContainer = document.createElement("section");
-		newRecipeContainer.classList.add("recipe");
-		newRecipeContainer.appendChild(renderRecipe(recipe));
+		renderRecipe(recipe);
 	});
 });
 
@@ -367,15 +365,5 @@ function renderRecipe(recipe) {
 	let html = recipeTemplate(recipe);
 	recipeContainer.innerHTML += html;
 }
-
-// function renderSearch(recipe) {
-// 	let recipeContainer = document.querySelector(".recipe");
-// 	recipeContainer.innerHTML = "";
-// 	let mainContainer = document.querySelector("main");
-// 	let newRecipeContainer = document.createElement("section");
-// 	newRecipeContainer.classList.add("recipe");
-// 	mainContainer.appendChild(newRecipeContainer);
-// 	newRecipeContainer.appendChild(renderRecipe(recipe));
-// }
 
 renderRecipe(recipes[randomNum]);
