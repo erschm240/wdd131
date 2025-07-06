@@ -181,3 +181,23 @@ nav a:hover {
     border-top: 1px solid;
     border-right: 1px solid;
 }
+
+.page2 img, .home img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.wireframe-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.wireframe-container img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+}
