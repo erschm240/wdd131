@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+:root {
+    /* Site color scheme */
+    --primary-color: #0D3B66;
+    --secondary-color: #F4D35E;
+    --accent1-color: #FAF0CA;
+    --accent2-color: #EFEFEF;
+    /* Site fonts */
+    --heading-font: "Germania One", Georgia, serif;
+    --paragraph-font: Helvetica, Arial, sans-serif;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+}
+
+nav img {
+    width: 100%;
+    max-width: 80px;
+}
+
+#navbar-text {
+    text-align: center;
+}
+
+nav a {
+    color: var(--accent2-color);
+    font-family: var(--paragraph-font);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: var(--accent1-color);
+}
+
+nav a:visited {
+    color: var(--accent1-color);
+}
+
+.heading {
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+    font-size: 2em;
+    margin: 20px;
+}
