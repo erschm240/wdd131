@@ -13,14 +13,16 @@
 
 body {
     margin: 0 auto;
+    font-family: var(--paragraph-font);
 }
 
 nav {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 15px;
     align-items: center;
+    text-align: center;
 }
 
 nav img {
@@ -28,32 +30,97 @@ nav img {
     max-width: 80px;
 }
 
-#navbar-text {
+#nav-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
-nav a {
+nav a, footer a {
     color: var(--accent2-color);
-    font-family: var(--paragraph-font);
-    /* text-decoration: none; */
     padding: 10px;
+    text-decoration: dotted underline;
+    text-underline-offset: 0.3em;
 }
 
-nav a:hover {
+nav a:hover, footer a:hover {
     color: var(--accent1-color);
 }
 
-nav a:visited {
+nav a:visited, footer a:visited {
     color: var(--accent1-color);
 }
 
 .heading {
     color: var(--secondary-color);
     font-family: var(--heading-font);
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 20px;
 }
 
 #hero img {
     width: 100%;
+}
+
+main {
+    margin: 50px;
+    text-align: center;
+    max-width: 1000px;
+    justify-self: center;
+    max-width: 960px;
+}
+
+main .heading {
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+main p {
+    text-align: left;
+}
+
+main ol {
+    max-width: fit-content;
+    justify-self: center;
+}
+
+.content-container {
+    margin-bottom: 50px;
+}
+
+main a {
+    padding: 10px;
+    text-decoration: dotted underline;
+    text-underline-offset: 0.3em;
+}
+
+main a:hover, a:visited {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: #0D3B66;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    
+    nav, #navtext, footer {
+        flex-direction: row;
+    }
+
+    footer {
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 1.4em;
+    }
 }
