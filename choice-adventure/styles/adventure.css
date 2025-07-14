@@ -14,6 +14,7 @@
 body {
     margin: 0 auto;
     font-family: var(--paragraph-font);
+    background-color: var(--accent2-color);
 }
 
 nav {
@@ -106,6 +107,7 @@ main a {
 
 main a:hover, a:visited {
     color: var(--primary-color);
+    min-width: 300px;
 }
 
 footer {
@@ -116,6 +118,52 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+
+/* In the Suburbs page styles */
+#story-container {
+    background-color: var(--primary-color);
+    justify-self: center;
+    padding: 30px;
+    margin: 20px;
+}
+
+#image-container img {
+    max-width: 90%;
+    margin: 20px;
+}
+
+hr {
+    background-color: var(--accent2-color);
+    margin: 30px -30px;
+}
+
+#context-container {
+    background-color: var(--accent2-color);
+    padding: 15px;
+    margin: 20px;
+    max-width: 90%;
+}
+
+#choice-container {
+    display: flex;
+    justify-self: center;
+    gap: 50px;
+    margin: 20px;
+}
+
+.choice-btn {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.choice-btn:hover {
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 @media screen and (min-width: 700px) {
