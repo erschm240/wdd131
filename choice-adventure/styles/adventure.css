@@ -24,7 +24,6 @@ nav {
     padding: 15px;
     align-items: center;
     text-align: center;
-    width: 100%;
 }
 
 nav img {
@@ -108,7 +107,6 @@ main a {
 
 main a:hover, a:visited {
     color: var(--primary-color);
-    min-width: 300px;
 }
 
 footer {
@@ -119,7 +117,6 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 100%;
 }
 
 /* In the Suburbs page styles */
@@ -128,7 +125,7 @@ footer {
     justify-self: center;
     padding: 30px;
     margin: 20px;
-    max-width: 100%;
+    /* width: 90%; */
 }
 
 #image-container img {
@@ -149,10 +146,9 @@ hr {
 
 #choice-container {
     display: flex;
-    justify-self: center;
+    justify-content: center;
     gap: 50px;
     margin: 20px;
-    width: 90%;
 }
 
 .choice-btn {
@@ -198,5 +194,10 @@ hr {
 
     #nav-text a, main a, footer a {
         text-decoration: none;
+    }
+
+    /* In the Suburbs page styles */
+    #story-container {
+        display: grid;
     }
 }
