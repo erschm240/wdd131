@@ -24,6 +24,7 @@ nav {
     padding: 15px;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 nav img {
@@ -118,6 +119,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    width: 100%;
 }
 
 /* In the Suburbs page styles */
@@ -126,6 +128,7 @@ footer {
     justify-self: center;
     padding: 30px;
     margin: 20px;
+    max-width: 100%;
 }
 
 #image-container img {
@@ -142,7 +145,6 @@ hr {
     background-color: var(--accent2-color);
     padding: 15px;
     margin: 20px;
-    max-width: 90%;
 }
 
 #choice-container {
@@ -150,6 +152,7 @@ hr {
     justify-self: center;
     gap: 50px;
     margin: 20px;
+    width: 90%;
 }
 
 .choice-btn {
