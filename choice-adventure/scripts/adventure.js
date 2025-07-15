@@ -1,9 +1,13 @@
+const intro = {
+    title: 'The Adventure Begins',
+    image: 'images/duplex-street.jpg',
+    alt: 'Street with red and white duplex houses',
+    context: 'You are walking down a residential street. You live in a small suburban area and are going home about 2:00 pm after work. You rent a duplex with a couple of roommates, but they aren’t with you, so you’re walking alone. As you reach your home, you hear rustling and see a dark blur dive behind your neighbor’s side of the house. They don’t have any pets. Do you INVESTIGATE or continue HOME?',
+    choice1: 'INVESTIGATE',
+    choice2: 'HOME'
+}
+
 const storyTree = [
-    intro = {
-        image: 'images/duplex-street.jpg',
-        alt: 'Street with red and white duplex houses',
-        context: 'You are walking down a residential street. You live in a small suburban area and are going home about 2:00 pm after work. You rent a duplex with a couple of roommates, but they aren’t with you, so you’re walking alone. As you reach your home, you hear rustling and see a dark blur dive behind your neighbor’s side of the house. They don’t have any pets. Do you INVESTIGATE or continue HOME?'
-    },
     investigate = {
         image: 'images/behind-house.jpg',
         alt: 'Grassy area behind a house',
@@ -96,3 +100,29 @@ const storyTree = [
     }
 ]
 
+function choiceTemplate(storyTree) {
+    return `<section id="story-container">
+            <div id="image-container">
+                <img src="${storyTree.investigate.image}" alt="${intro.alt}">
+            </div>
+            <hr/>
+            <div id="context-container">
+                <h2 class="story-heading">${intro.title}</h2>
+                <p>
+                    ${intro.context}
+                </p>
+                <div id="choice-container">
+                    <button class="choice-btn">${intro.choice1}</button>
+                <button class="choice-btn">${intro.choice2}</button>
+                </div>
+            </div>
+        </section>`
+}
+
+function renderChoice(storyTree) {
+    let main = document.querySelector('main');
+    let html = choiceTemplate(storyTree);
+    main.innerHTML += html;
+}
+
+renderChoice(storyTree);
