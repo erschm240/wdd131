@@ -92,6 +92,7 @@ main p {
 main ol {
     max-width: fit-content;
     justify-self: center;
+    color: var(--primary-color);
 }
 
 .content-container {
