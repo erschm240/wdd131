@@ -126,23 +126,30 @@ footer {
     justify-self: center;
     padding: 30px;
     margin: 20px;
-    /* width: 90%; */
+    border-radius: 5px;
 }
 
 #image-container img {
     max-width: 90%;
     margin: 20px;
+    justify-self: center;
+    width: 100%;
+    border-radius: 5px;
 }
 
-hr {
+/* hr {
     background-color: var(--accent2-color);
     margin: 30px -30px;
-}
+} */
 
 #context-container {
     background-color: var(--accent2-color);
     padding: 15px;
     margin: 20px;
+    justify-self: center;
+    line-height: 1.5em;
+    align-content: center;
+    border-radius: 5px;
 }
 
 #choice-container {
@@ -182,15 +189,16 @@ hr {
     footer {
         gap: 50px;
     }
+
 }
 
 @media screen and (min-width: 960px) {
     body {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     main {
-        max-width: 960px;
+        max-width: 1200px;
     }
 
     #nav-text a, main a, footer a {
@@ -198,7 +206,12 @@ hr {
     }
 
     /* In the Suburbs page styles */
+    hr {
+        display: hidden;
+    }
+
     #story-container {
         display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

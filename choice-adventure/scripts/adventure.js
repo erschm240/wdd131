@@ -125,20 +125,20 @@ const storyTree = [
         alt: 'Cloud of blue smoke',
         context: 'You raise your arms in the air and yell to scare the weird cat away. Unfazed, it gets up and walks away and around the corner of the house. Confused, you drop your arms and, after a few seconds, run after the cat. The cat is nowhere to be seen, leaving behind a strange blue cloud of smoke.'
     },
-    {
-        name: '',
-        image: '',
-        alt: '',
-        context: ''
-    }
+    // Extra object
+    // {
+    //     name: '',
+    //     image: '',
+    //     alt: '',
+    //     context: ''
+    // }
 ]
 
 function choiceTemplate(storyTree) {
     return `<section id="story-container">
             <div id="image-container">
-                <img src="${storyTree.image}" alt="${storyTreealt}">
+                <img src="${storyTree.image}" alt="${storyTree.alt}">
             </div>
-            <hr/>
             <div id="context-container">
                 <h2 class="story-heading">${storyTree.title}</h2>
                 <p>
@@ -158,4 +158,5 @@ function renderChoice(storyTree) {
     main.innerHTML += html;
 }
 
-renderChoice(storyTree);
+renderChoice(storyTree[0]);
+
