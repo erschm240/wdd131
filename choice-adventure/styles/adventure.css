@@ -13,7 +13,7 @@
 
 body {
     margin: 0 auto;
-    font-family: var(--paragraph-font);
+    font-family: Helvetica, Arial, sans-serif;
     background-color: var(--accent2-color);
 }
 
@@ -58,7 +58,7 @@ nav a:visited, footer a:visited {
 
 .heading {
     color: var(--secondary-color);
-    font-family: var(--heading-font);
+    font-family: "Germania One", Georgia, serif;
     font-size: 2.5em;
     margin: 20px;
     letter-spacing: 0.05em;
@@ -217,9 +217,6 @@ h3 {
     }
 
     /* In the Suburbs page styles */
-    hr {
-        display: hidden;
-    }
 
     #story-container {
         display: grid;
