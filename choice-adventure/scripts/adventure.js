@@ -107,7 +107,7 @@ const storyTree = [
     {
         name: 'show',
         type: 'pre-ending',
-        title: 'Wat’cha Watching?',
+        title: 'Watcha Watching?',
         image: 'images/watch-favorite-show.jpg',
         alt: 'Hand holding remote in front of a TV',
         context: 'You glance at your roommate, smile and wave, and go back to your show. Your roommate comes over and asks what you’re watching. You pause the show and briefly explain what it is, and your roommate asks to join in. You tell them you are in the middle of an episode, but you don’t mind watching it together from the beginning once you finish.',
