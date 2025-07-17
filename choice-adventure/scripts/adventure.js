@@ -135,7 +135,7 @@ const storyTree = [
         name: 'look',
         type: 'choice',
         title: 'Ooh! Kitty!',
-        image: 'images/cat-purple-eyes.png',
+        image: 'images/cat-purple-eyes.webp',
         alt: 'Black cat with purple eyes on fence',
         context: 'You look outside the window in the back door. There is a small black cat staring up at you with curiosity. It does not have a collar, so it is likely not the blur from earlier. After you open the door and go outside, you realize this cat isn’t normal, as its eyes are glowing purple. Do you PET the cat or try to SCARE it away?',
         choice1: 'PET',
@@ -145,7 +145,7 @@ const storyTree = [
         name: 'pet',
         type: 'pre-ending',
         title: 'Pspspsps',
-        image: 'images/cat-purple-eyes.png',
+        image: 'images/cat-purple-eyes.webp',
         alt: 'Black cat with purple eyes on fence',
         context: 'You open the door, go outside, approach the cat cautiously. It doesn’t budge, so you reach down and rub its head. It purrs, and the tips of its tails start to glow purple. You feel energy flow into you, then you hear a whisper in your head, "Become one with the animals..."',
         choice1: 'CONTINUE PET'
