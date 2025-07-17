@@ -17,6 +17,11 @@ body {
     background-color: var(--accent2-color);
 }
 
+img {
+    width: auto;
+    height: auto;
+}
+
 nav {
     background-color: var(--primary-color);
     display: flex;
