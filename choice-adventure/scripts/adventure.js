@@ -147,7 +147,7 @@ const storyTree = [
         title: 'Pspspsps',
         image: 'images/cat-purple-eyes.webp',
         alt: 'Black cat with purple eyes on fence',
-        context: 'You open the door, go outside, approach the cat cautiously. It doesn’t budge, so you reach down and rub its head. It purrs, and the tips of its tails start to glow purple. You feel energy flow into you, then you hear a whisper in your head, "Become one with the animals..."',
+        context: 'You open the door, go outside, approach the cat cautiously. It doesn’t budge, so you reach down and rub its head. It purrs, and the tips of its tail start to glow purple. You feel energy flow into you, then you hear a whisper in your head, "Become one with the animals..."',
         choice1: 'CONTINUE PET'
     },
     {
